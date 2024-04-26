@@ -1,0 +1,33 @@
+body {
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #006EB6;
+    letter-spacing: 1px;
+}
+
+main ul {
+    text-align: left;
+    margin-left: 20px;
+}
+
+footer img {
+    width: 150px;
+}
