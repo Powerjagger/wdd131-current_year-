@@ -19,8 +19,10 @@ h1 {
 }
 
 h2 {
+    font-family: sans-serif;
     color: #006EB6;
     letter-spacing: 1px;
+    font-size: 20px;
 }
 
 main ul {
@@ -30,4 +32,12 @@ main ul {
 
 footer img {
     width: 150px;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.underline {
+    text-decoration: underline;
 }
