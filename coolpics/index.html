@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cool Pics - A gallery of cool and interesting pictures.">
     <title>Cool Pics 📷</title>
     <link rel="stylesheet" href="coolpics.css">
 </head>
+
 <body>
     <header>
+        <ul class="hide">
+        </ul>
+        
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="" alt="" id="modalImage">
+            </div>
+        </div>
+
         <h1>Cool Pics 📷</h1>
         <nav>
             <ul>
@@ -23,20 +41,63 @@
     <main>
         <h2>Current Gallery</h2>
         <section class="gallery">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
-            <img src="norris-sm.jpeg" alt="Placeholder image">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
+            <img src="norris-sm.jpeg" alt="Cool image of a landscape">
         </section>
     </main>
+
+    <script>
+        const menuButton = document.createElement('button');
+        menuButton.textContent = 'Menu';
+        menuButton.id = 'menu-button';
+
+        const navMenu = document.querySelector('nav ul');
+        navMenu.classList.add('hide');
+        navMenu.parentElement.insertBefore(menuButton, navMenu);
+
+        menuButton.addEventListener('click', function () {
+            navMenu.classList.toggle('hide');
+        });
+
+        function handleResize() {
+            if (window.innerWidth > 1000) {
+                navMenu.classList.remove('hide');
+            } else {
+                navMenu.classList.add('hide');
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('load', handleResize);
+
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = modal.querySelector('.close');
+
+        galleryImages.forEach(image => {
+            image.addEventListener('click', function () {
+                modal.style.display = 'block';
+                modalImage.src = this.src;
+                modalImage.alt = this.alt;
+            });
+        });
+
+        closeModal.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+    </script>
 
     <footer>
         <p>&copy;2023 Not a real site 😀</p>
     </footer>
 </body>
+
 </html>
