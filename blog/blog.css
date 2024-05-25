@@ -1,0 +1,108 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
+}
+
+a {
+    text-decoration: none;
+    color: #AF1B3F;
+}
+
+a:hover {
+    color: #EFC69B;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #473144;
+    border-bottom: 1px solid #473144;
+    align-items: right;
+}
+
+nav a {
+    font-size: 1.2em;
+    padding: 10px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Changed to a single column */
+    gap: 20px;
+    padding: 20px;
+}
+
+.articles {
+    display: grid;
+    gap: 20px;
+}
+
+.article-content {
+    display: flex; /* Use flexbox for article content */
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center content horizontally */
+}
+
+.article-title {
+    color: darkred;
+    margin-bottom: 10px; /* Optional: Add some spacing */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.description-container {
+    text-align: center; /* Center description */
+    margin-bottom: 20px; /* Add spacing */
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.filters {
+    padding: 20px; /* Remove border and padding for filters */
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Set a maximum height for the images */
+}
+
+article h2 {
+    margin-top: 0; /* Adjust top margin */
+}
+
+article p {
+    margin: 5px 0; /* Adjust margin */
+}
