@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    text-align: center;
+}
+
+header img {
+    max-width: 50px;
+    margin-right: 1em;
+}
+
+header h1 {
+    font-family: var(--secondary-font);
+    font-size: 1.8em;
+    margin: 0;
+}
+
+main {
+    padding: 1em;
+}
+
+.search form {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.search input {
+    flex: 1;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 0.5em 1em;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recipe {
+    border: 1px solid var(--primary-color);
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.recipe h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.rating {
+    display: flex;
+    margin-bottom: 0.5em;
+}
+
+.rating .icon-star, .rating .icon-star-empty {
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+
+.recipe img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.recipe .description {
+    display
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1em;
+    font-size: 0.8em;
+    position: relative;
+}
+
+footer .social {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+footer .social a {
+    margin: 0 0.3em;
+    display: inline-block;
+}
+
+footer .social img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
