@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://yourwebsite.com">
     <meta name="twitter:card" content="summary_large_image">
     <title>Recipe Book</title>
-    <link rel="stylesheet" href="styles/recipes.css">
+    <link rel="stylesheet" href="recipes.css">
 </head>
 <body>
     <header>
@@ -19,22 +19,13 @@
     </header>
     <main>
         <section class="search">
-            <form action="#" method="GET">
-                <input type="text" name="search" placeholder="Search recipes...">
+            <form id="search-form" action="#" method="GET">
+                <input type="text" name="search" id="search-input" placeholder="Search recipes...">
                 <button type="submit">Search</button>
             </form>
         </section>
-        <section class="recipe">
-            <h2>Recipe Title</h2>
-            <div class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
-            </div>
-            <img src="images/recipe-image.jpg" alt="Delicious Recipe">
-            <p class="description">This is a delicious recipe that you will love!</p>
+        <section id="recipe-container">
+            <!-- Recipes will be rendered here -->
         </section>
     </main>
     <footer>
@@ -45,5 +36,6 @@
             <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
     </footer>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
